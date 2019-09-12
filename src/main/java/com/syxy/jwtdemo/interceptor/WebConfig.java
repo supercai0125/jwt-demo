@@ -20,10 +20,12 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        //token拦截器除了login register都拦截
         registry.addInterceptor(tokenInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/user/login","/user/register","/register.html","/login.html","/main.html");
 
+        //跨域拦截器 拦截所有方法
         registry.addInterceptor(crossOriginInterceptor)
                 .addPathPatterns("/**");
     }

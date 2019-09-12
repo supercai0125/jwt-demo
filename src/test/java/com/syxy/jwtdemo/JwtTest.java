@@ -6,6 +6,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.Test;
 
 /**
+ * jwt简单的测试
  * @author ercai
  * @date 2019/9/11 - 10:52
  */
